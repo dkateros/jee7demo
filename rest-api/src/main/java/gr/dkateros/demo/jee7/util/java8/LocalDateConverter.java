@@ -2,7 +2,6 @@ package gr.dkateros.demo.jee7.util.java8;
 
 import java.sql.Date;
 import java.time.LocalDate;
-import java.time.temporal.ChronoField;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
@@ -17,12 +16,13 @@ public class LocalDateConverter implements AttributeConverter<LocalDate, Date> {
 
 	@Override
 	public Date convertToDatabaseColumn(LocalDate attribute) {
-		long epochDays = attribute.getLong(ChronoField.EPOCH_DAY);
-		return new Date(epochDays*24*60*60*1000);
+		if(attribute==null) return null;
+		return Date.valueOf(attribute);
 	}
 
 	@Override
 	public LocalDate convertToEntityAttribute(Date dbData) {
+		if(dbData==null) return null;
 		return dbData.toLocalDate();
 	}
 
