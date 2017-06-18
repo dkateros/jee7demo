@@ -30,7 +30,9 @@
 	</properties>
 
 	<modules>
+		<module>domain</module>
 		<module>rest-api</module>
+		<module>jsf-ui</module>
 	</modules>
 
 </project>

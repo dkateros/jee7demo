@@ -8,14 +8,15 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>rest-api</artifactId>
+	<artifactId>jsf-ui</artifactId>
 	<packaging>war</packaging>
 
 	<build>
-		<finalName>rest-api</finalName>
+		<finalName>jsf-ui</finalName>
 	</build>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -24,23 +25,17 @@
 		</dependency>
 
 		<dependency>
-			<groupId>javax.json.bind</groupId>
-			<artifactId>javax.json.bind-api</artifactId>
-			<version>1.0.0-RC2</version>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.1</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.eclipse</groupId>
-			<artifactId>yasson</artifactId>
-			<version>1.0.0-RC1</version>
-		</dependency>
-
+		
 		<dependency>
 			<groupId>gr.dkateros.demo</groupId>
 			<artifactId>domain</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>

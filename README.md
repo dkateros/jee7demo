@@ -1,5 +1,14 @@
 # jee7demo
-A project aiming to prototype some simple JEE 7 based applications.
+A project aiming to prototype some simple JEE 7 based applications. Runtime is Java8. JSON-B reference implementation (not included with JEE 7) is used.
+
+## domain
+Domain entities and data access objects. Tests conversion of db <-> java <-> json. Minimal boilerplate, just the entity declaration and a generic DAO implementation  that does the heavy lifting. A couple converters to get JPA in line with Java8 date APIs are included.
 
 ## rest-api
-A web application that exposes CRUD operations of a sample entity with a REST API. This means to demonstrate JPA, JAX-RS, JAXB interactions. JSON-B reference implementation (not included with JEE 7) is used to simplify entity <-> JSON conversions. The goal is to write zero boilerplate code and have everything handled by the framework. The developer should not need to be aware of the intricacies of entity DB persistence or JSON serialization.
+Exposes restful resources for performing read / write operations on domain entities. Implementation leverages domain EJBs.
+
+## jsf-ui
+Some JSF UI on top of the domain EJBs. Will test some primefaces components.
+
+
+
